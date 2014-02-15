@@ -171,7 +171,7 @@ namespace HangMan
                     Console.WriteLine(@" _____");
                     Console.WriteLine(@" |/  |");
                     Console.WriteLine(@" |   O");
-                    Console.WriteLine(@" |  \|");
+                    Console.WriteLine(@" |  /|");
                     Console.WriteLine(@" |   |");
                     Console.WriteLine(@" |");
                     Console.WriteLine(@"/ \");
@@ -182,7 +182,7 @@ namespace HangMan
                     Console.WriteLine(@" _____");
                     Console.WriteLine(@" |/  |");
                     Console.WriteLine(@" |   O");
-                    Console.WriteLine(@" |  \|/");
+                    Console.WriteLine(@" |  /|\");
                     Console.WriteLine(@" |   |");
                     Console.WriteLine(@" |");
                     Console.WriteLine(@"/ \");
@@ -193,7 +193,7 @@ namespace HangMan
                     Console.WriteLine(@" _____");
                     Console.WriteLine(@" |/  |");
                     Console.WriteLine(@" |   O");
-                    Console.WriteLine(@" |  \|/");
+                    Console.WriteLine(@" |  /|\");
                     Console.WriteLine(@" |   |");
                     Console.WriteLine(@" |  /");
                     Console.WriteLine(@"/ \");
@@ -204,7 +204,7 @@ namespace HangMan
                     Console.WriteLine(@" _____");
                     Console.WriteLine(@" |/  |");
                     Console.WriteLine(@" |   O");
-                    Console.WriteLine(@" |  \|/");
+                    Console.WriteLine(@" |  /|\");
                     Console.WriteLine(@" |   |");
                     Console.WriteLine(@" |  / \");
                     Console.WriteLine(@"/ \");
