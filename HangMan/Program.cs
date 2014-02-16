@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -13,7 +14,18 @@ namespace HangMan
 
         private static void GameLoop()
         {
-            var wordList = File.ReadAllLines(@"C:\temp\words.txt").ToList();
+            var dbPath = @"C:\temp\.db";
+            if (!Directory.Exists(dbPath))
+            {
+                Directory.CreateDirectory(dbPath);
+                var lines = File.ReadAllLines(@"C:\temp\wordlist.txt");
+                foreach (var line in lines)
+                    File.WriteAllText(Path.Combine(dbPath, line), string.Empty);
+            }
+            List<string> wordList = new List<string>();
+            foreach (var fn in Directory.GetFiles(dbPath))
+                wordList.Add(Path.GetFileNameWithoutExtension(fn));
+
             var rand = new Random();
 
             while (wordList.Count > 0)
@@ -71,7 +83,9 @@ namespace HangMan
                         }
                     }
                 }
+                File.Delete(Path.Combine(dbPath, word));
             }
+            Directory.Delete(dbPath);
         }
 
         private static void DisplayScore(int score)
